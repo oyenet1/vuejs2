@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>vuejs</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-text="name" class="text-primary"></h1>
+        <p class="text-success">My name is {{name}} and my age is {{ number }}</p>
+        <h4 class="text-danger" data-toggle="tootip" data-placement="right" :title="name">Over to see my name</h4>
+    </div>
+
+    <!-- the vuejs file -->
+    <script src="./js/vue.js"></script>
+    <!-- bootstrap js files -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- vue user defined js file -->
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Bowofade Oyerinde',
+                number: 26
+            }
+        });
+
+        // jquery tootip
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+
+</html>

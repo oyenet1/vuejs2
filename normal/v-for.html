@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>vuejs</title>
+</head>
+
+<body>
+    <div id="app" class="row p-3  mx-auto">
+        <div class="frist col-sm-6">
+            <h4>Fisrt v-for statement</h4>
+            <ul type="">
+                <li v-for="i in 5"> {{ i }} </li>
+            </ul>
+        </div>
+        <div class="secon col-sm-6">
+            <h4>Second v-for statement</h4>
+            <ol>
+                <li v-for="data in items">{{ data }}</li>
+            </ol>
+        </div>
+        <div class="form-group col-sm-6">
+            <label v-text="input" for="" class="p-2 text-left font-weight-bold display-4"></label>
+            <input type="text" v-model="input" class="form-control">
+        </div>
+       
+    </div>
+
+    <!-- the vuejs file -->
+    <script src="./js/vue.js"></script>
+    <!-- bootstrap js files -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- vue user defined js file -->
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Bowofade Oyerinde',
+                items: [
+                    'Adeoluwa john',
+                    'Oyerinde Joseph',
+                    'Adeoluwa Ibunkun',
+                    'John Carter',
+                    'Warren Buffet'
+                    ]
+            }
+        });
+
+        // jquery tootip
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+
+</html>
